@@ -4,8 +4,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.berndpruenster.netlayer</groupId>
-        <artifactId>parent</artifactId>
+        <groupId>com.github.devinbileck</groupId>
+        <artifactId>netlayer</artifactId>
         <version>0.6.4.1</version>
     </parent>
     <properties>
