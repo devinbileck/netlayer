@@ -378,7 +378,7 @@ abstract class TorContext @Throws(IOException::class) protected constructor(val 
 
             return ctrlCon
         } catch (e: Exception) {
-            throw IOException(e)
+            throw IOException(e.getMessage())
         } finally {
             // It's possible that something 'bad' could happen after we
             // executed exec but before we takeOwnership()
