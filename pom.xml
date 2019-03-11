@@ -32,10 +32,6 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
-        <repository>
-            <id>tor-binary</id>
-            <url>https://raw.githubusercontent.com/JesusMcCloud/tor-binary/master/release/</url>
-        </repository>
     </repositories>
     <dependencies>
          <dependency>
