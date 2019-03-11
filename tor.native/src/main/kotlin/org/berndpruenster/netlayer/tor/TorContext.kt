@@ -357,8 +357,8 @@ abstract class TorContext @Throws(IOException::class) protected constructor(val 
 
             // Wait for the auth cookie file to be created/updated
             if (!cookieObserver.poll(COOKIE_TIMEOUT.toLong(), TimeUnit.MILLISECONDS)) {
-                if (OsType.current == OsType.WIN && !torProcess.isAlive()) {
-                    val exit = torProcess.exitValue()
+                if (OsType.current == OsType.WIN && !torProcess?.isAlive()) {
+                    val exit = torProcess?.exitValue()
                     throw IOException("Tor exited with value $exit")
                 }
                 workingDirectory.log()
@@ -393,7 +393,7 @@ abstract class TorContext @Throws(IOException::class) protected constructor(val 
 
             return ctrlCon
         } catch (e: Exception) {
-            throw IOException(e.getMessage())
+            throw IOException(e.message)
         } finally {
             // It's possible that something 'bad' could happen after we
             // executed exec but before we takeOwnership()
