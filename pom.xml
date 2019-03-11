@@ -5,7 +5,7 @@
 
     <groupId>com.github.devinbileck</groupId>
     <artifactId>netlayer</artifactId>
-    <version>0.6.4.3</version>
+    <version>0.6.4.6</version>
     <packaging>pom</packaging>
 
     <name>Netlayer</name>
@@ -58,7 +58,7 @@
                 <artifactId>exists-maven-plugin</artifactId>
                 <version>0.0.6</version>
                 <configuration>
-                    <project>com.cedricwalter:tor-binary-windows:${tor-binary.version}</project>
+                    <project>com.github.JesusMcCloud.tor-binary-windows:${tor-binary.version}</project>
                     <artifact>tor-binary-windows-${tor-binary.version}.pom</artifact>
                     <property>tor-binary-exists</property>
                     <skip>${force-update-tor-binaries}</skip>
