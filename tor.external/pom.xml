@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.github.devinbileck</groupId>
         <artifactId>netlayer</artifactId>
-        <version>0.6.4.1</version>
+        <version>0.6.4.3</version>
     </parent>
     <properties>
         <java.version>1.8</java.version>
