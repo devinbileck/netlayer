@@ -357,7 +357,7 @@ abstract class TorContext @Throws(IOException::class) protected constructor(val 
 
             // Wait for the auth cookie file to be created/updated
             if (!cookieObserver.poll(COOKIE_TIMEOUT.toLong(), TimeUnit.MILLISECONDS)) {
-                if (OsType.current == OsType.WIN && !torProcess?.isAlive()) {
+                if (OsType.current == OsType.WIN && !torProcess!!.isAlive()) {
                     val exit = torProcess?.exitValue()
                     throw IOException("Tor exited with value $exit")
                 }
